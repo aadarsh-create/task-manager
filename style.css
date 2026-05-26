@@ -1,0 +1,146 @@
+:root {
+  --gbg1: #6366f1;
+  --gbg2: #06b6d4;
+
+  --bg1: rgba(255, 255, 255, 0.6);
+  --clr: black;
+
+  --b-rad: 10px;
+  --trans: 0.2s ease;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  --txt-dcor: none;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, var(--gbg1), var(--gbg2));
+}
+
+body.dark {
+  --bg1: rgba(30, 41, 59, 0.75);
+  --clr: white;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+p,
+h1 {
+  margin: 0px;
+  color: var(--clr);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  transition: var(--trans);
+}
+
+button {
+  border-radius: var(--b-rad);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+
+  background-color: var(--bg1);
+  border-radius: var(--b-rad);
+  box-shadow: var(--shadow);
+
+  transition: var(--trans);
+}
+
+.header {
+  display: flex;
+  gap: 20px;
+}
+
+.thmebtn {
+  background: linear-gradient(135deg, var(--gbg1), var(--gbg2));
+  transition: var(--trans);
+}
+
+.thmebtn:hover {
+  transform: scale(1.05);
+}
+
+.addbar {
+  display: flex;
+  gap: 10px;
+}
+
+.addbar button {
+  background-color: var(--gbg1);
+  color: white;
+  transition: var(--trans);
+}
+
+.addbar button:hover {
+  transform: translateY(-2px);
+}
+
+input {
+  background-color: var(--bg1);
+  color: var(--clr);
+
+  padding: 10px;
+  flex: 1;
+  border: none;
+  border-radius: var(--b-rad);
+
+  transition: 0.2s ease;
+}
+
+input:hover {
+  transform: scale(1.01);
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: var(--trans);
+}
+.task {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--bg1);
+  border-radius: var(--b-rad);
+
+  transition: var(--trans);
+  cursor: pointer;
+}
+
+.task:hover {
+  transform: translateY(-1px);
+}
+.task.chk {
+  --txt-dcor: line-through;
+}
+.txt {
+  text-decoration: var(--txt-dcor);
+}
+
+.task button {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: red;
+
+  transition: var(--trans);
+}
+
+.task button:hover {
+  transform: translateY(-1px);
+  background-color: red;
+  color: white;
+}
