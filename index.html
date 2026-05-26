@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <h1>✨ Task Manager</h1>
+        <button class="thmebtn" onclick="thmeTgle()">🌙</button>
+      </div>
+
+      <div class="addbar">
+        <input type="text" placeholder="What needs to be done ?" id="inp" />
+        <button onclick="fadd()">Add Task</button>
+      </div>
+
+      <div class="tasks">
+        <div class="task">
+          <p class="icon" onclick="fchck(this)">❌</p>
+          <p class="txt" onclick="fchck(this)">Buy Milk 🐮</p>
+          <button onclick="fremove(this)">Remove</button>
+        </div>
+
+        <div class="task">
+          <p class="icon" onclick="fchck(this)">❌</p>
+          <p class="txt" onclick="fchck(this)">Shopping 👜</p>
+          <button onclick="fremove(this)">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
