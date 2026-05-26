@@ -1,4 +1,5 @@
 # ✨ Task Manager
+🔗 Live Demo: https://aadarsh-create.github.io/task-manager/
 
 A clean and modern Task Manager built using **HTML, CSS, and Vanilla JavaScript**.
 
