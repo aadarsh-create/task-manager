@@ -3,8 +3,7 @@ function thmeTgle() {
   body.classList.toggle("dark");
 }
 
-function fchck(ele) {
-  let task = ele.parentElement;
+function fchck(task) {
   task.classList.toggle("chk");
   let icon = task.querySelector(".icon");
 
@@ -31,10 +30,13 @@ function fadd() {
 
   let div = document.createElement("div");
   div.classList.add("task");
+  div.onclick = function(){
+    fchck(div);
+  };
 
   div.innerHTML = `
-            <p class="icon" onclick="fchck(this)">❌</p>
-            <p class="txt" onclick="fchck(this)">${txt}</p>
+            <p class="icon">❌</p>
+            <p class="txt">${txt}</p>
             <button onclick="fremove(this)">Remove</button>
         `;
   document.querySelector(".tasks").appendChild(div);
